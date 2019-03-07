@@ -1,0 +1,22 @@
+<style>
+  h1 {
+    font-family: monospace;
+    font-size: 2em;
+    color: blue;
+  }
+</style>
+
+<h1 id="hello">Hello world</h1>
+
+<script>
+  function setTitle () {
+    var hello = document.querySelector('#hello');
+    // the above might not have matched, so we check
+    if (hello) {
+      hello.textContent = "Hello world, it is now " + new Date();
+    }
+  }
+
+  setInterval(setTitle, 1000);
+  setTitle();
+</script>
